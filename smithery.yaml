@@ -1,0 +1,9 @@
+# Smithery deployment descriptor — https://smithery.ai
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties: {}
+    additionalProperties: false
+  commandFunction: |-
+    () => ({ command: 'node', args: ['dist/index.js'] })

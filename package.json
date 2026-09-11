@@ -1,0 +1,41 @@
+{
+  "name": "roomvana-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Roomvana — browse room types & design styles and get a direct link to the Roomvana studio. Redesign any room from a photo in ~30s at https://roomvana.ai",
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "interior-design",
+    "ai",
+    "home-design",
+    "roomvana"
+  ],
+  "homepage": "https://roomvana.ai",
+  "license": "MIT",
+  "author": "Roomvana (https://roomvana.ai)",
+  "type": "module",
+  "bin": {
+    "roomvana-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  }
+}
