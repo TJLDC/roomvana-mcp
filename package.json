@@ -1,7 +1,7 @@
 {
   "name": "roomvana-mcp",
-  "version": "0.1.0",
-  "description": "MCP server for Roomvana — browse room types & design styles and get a direct link to the Roomvana studio. Redesign any room from a photo in ~30s at https://roomvana.ai",
+  "version": "0.1.1",
+  "description": "MCP server for Roomvana — browse room types & design styles and get a direct link to the Roomvana studio. Redesign your house, yard or any room from a photo at https://roomvana.ai",
   "keywords": [
     "mcp",
     "modelcontextprotocol",

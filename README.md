@@ -1,6 +1,6 @@
 # Roomvana MCP server
 
-An [MCP](https://modelcontextprotocol.io) server for **[Roomvana](https://roomvana.ai)** — AI interior design. It lets an AI assistant browse the room types and design styles Roomvana supports and hand the user a studio link with their choices pre-selected. Upload a photo of any room and get a realistic redesign in about 30 seconds at **[roomvana.ai](https://roomvana.ai)**.
+An [MCP](https://modelcontextprotocol.io) server for **[Roomvana](https://roomvana.ai)** — AI home design for houses, yards and rooms. It lets an AI assistant browse the room types and design styles Roomvana supports and hand the user a studio link with their choices pre-selected. Upload a photo of your house, yard or any room and see it redesigned at **[roomvana.ai](https://roomvana.ai)**.
 
 Read-only and no sign-in required: this server never uploads photos or spends credits. The actual redesign happens on the website.
 

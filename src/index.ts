@@ -18,10 +18,10 @@ import {
 
 const server = new McpServer({
   name: "roomvana",
-  version: "0.1.0",
+  version: "0.1.1",
 });
 
-const FOOTER = `\nGenerate the actual redesign from your photo at ${SITE_BASE} (about 30 seconds; new users start with free credits).`;
+const FOOTER = `\nGenerate the actual redesign from your photo at ${SITE_BASE} (free to try after signing in with Google).`;
 
 server.tool(
   "list_design_styles",
@@ -61,7 +61,7 @@ server.tool(
 
 server.tool(
   "design_a_room",
-  "Turn a room + style choice into a Roomvana studio link with those options pre-selected. The user opens the link, uploads a photo of the room, and gets an AI redesign in about 30 seconds. Validates the room and style against Roomvana's live catalog.",
+  "Turn a room + style choice into a Roomvana studio link with those options pre-selected. The user opens the link, uploads a photo of the room, and gets an AI redesign. Validates the room and style against Roomvana's live catalog.",
   {
     room: z
       .string()
