@@ -18,15 +18,16 @@ import {
 
 const server = new McpServer({
   name: "roomvana",
-  version: "0.1.1",
+  version: "0.1.2",
 });
 
 const FOOTER = `\nGenerate the actual redesign from your photo at ${SITE_BASE} (free to try after signing in with Google).`;
 
 server.tool(
   "list_design_styles",
-  "List the interior-design styles Roomvana can render (e.g. modern, japandi, industrial), each with a short description. Use this to pick a `style` for design_a_room.",
+  "List the design styles Roomvana can render (e.g. modern, japandi, industrial), each with a short description. Use this to pick a `style` for design_a_room.",
   {},
+  { title: "List design styles", readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   async () => {
     const cat = await getCatalog();
     const lines = cat.styles.map((id) => `- ${id} — ${styleLabel(id)}`);
@@ -41,6 +42,7 @@ server.tool(
   "list_room_types",
   "List the room and outdoor space types Roomvana can redesign (interior rooms, house exterior, and garden/outdoor spaces). Use this to pick a `room` for design_a_room.",
   {},
+  { title: "List room types", readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   async () => {
     const cat = await getCatalog();
     const section = (title: string, ids: string[]) =>
@@ -75,6 +77,7 @@ server.tool(
       .optional()
       .describe("Optional free-text notes about the desired look (echoed back to help the user; not encoded in the link)."),
   },
+  { title: "Build a studio link", readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   async ({ room, style, notes }) => {
     const cat = await getCatalog();
     const allRooms = [...cat.rooms, ...cat.exteriors, ...cat.gardens];
